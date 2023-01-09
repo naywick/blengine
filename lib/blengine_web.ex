@@ -48,6 +48,7 @@ defmodule BlengineWeb do
         layout: {BlengineWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
+      import Phoenix.Component
     end
   end
 
