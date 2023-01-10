@@ -53,4 +53,11 @@ defmodule BlengineWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
+
+  live_session :admin do
+    scope "/admin", BlengineWeb.Admin, as: :admin do
+      live "/posts", Posts.IndexLive, :index, as: :posts
+      live "/posts/new", Posts.IndexLive, :new, as: :posts
+    end
+  end
 end
