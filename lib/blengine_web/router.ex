@@ -57,7 +57,7 @@ defmodule BlengineWeb.Router do
   live_session :admin do
     scope "/admin", BlengineWeb.Admin, as: :admin do
       live "/posts", Posts.IndexLive, :index, as: :posts
-      live "/posts/new", Posts.IndexLive, :new, as: :posts
+      live "/posts/new", Posts.FormLive, :new, as: :posts
     end
   end
 end
